@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
 function Logo({ className }) {
