@@ -1,28 +1,61 @@
 {
   "bg": "https://www.itl.cat/pngfile/big/36-365904_coffee-face-smile-wallpapers-hd-happy-cup-of.jpg",
-  "title": "Quiz Coffee da Alura",
-  "description": "Vamos descobrir os seus conhecimentos sobre café nesse quiz divertido!",
+  "title": "Quiz Sobre Café",
+  "description": "Antes de começar, já pegou um café para esse Quiz? Nada melhor que um quiz e um café quentinho para relaxar.",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "title": "O café fica em qual posição entre as bebidas mais consumidas no mundo?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Primeiro Lugar",
+        "Segunda Lugar",
+        "Terceiro Lugar"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "De onde vem o grão do café?",
+      "description": "Essa é uma curiosidade bacana",
+      "answer": 0,
+      "alternatives": [
+        "São as sementes de uma fruta",
+        "São os grãos de uma planta",
+        "É tão bom que deve vir de outra dimensão"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "Cada \"Cereja de Café\" tem quantas sementes?",
+      "description": "Se você usar a lógica, essa resposta está na pergunta!",
+      "answer": 0,
+      "alternatives": [
+        "2 Sementes",
+        "3 Sementes",
+        "4 Sementes"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "O que acontece quando o café é moído na hora do preparo?",
+      "description": "Essa é pra aquecer",
+      "answer": 1,
+      "alternatives": [
+        "O nível de cafeína diminuí",
+        "O café fica com um leve toque doce",
+        "O café fica mais aromático"  
       ]
     },
     {
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
+      "title": "Quanto tempo a substância da cafeína permanece no corpo?",
       "description": "Faz tempo em haha",
-      "answer": 0,
+      "answer": 1,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "1 a 3 horas",
+         "3 a 6 horas",
+         "6 a 9 horas"
       ]
     }
   ],
@@ -32,6 +65,8 @@
   "theme": {
     "colors": {
       "darkYellow": "#e0b06e",
+      "darkYellowHover": "#d49237",
+      "darkYellowDisabled": "#d4923770",
       "brown": "#4e2c23",
       "torrao":"#2b1812",
       "contrastText": "#FFFFFF",

@@ -4,10 +4,13 @@ import { useRouter } from 'next/router';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
+// import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import LinkQuiz from '../src/components/LinkQuiz';
+import BtJogar from '../src/components/BtJogar';
+import InputNome from '../src/components/InputNome';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -27,7 +30,6 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
@@ -39,16 +41,19 @@ export default function Home() {
               router.push(`/quiz?name=${nome}`);
             }}
             >
-              <input
+              <InputNome
                 onChange={(e) => {
                   setNome(e.target.value);
                 }}
                 placeholder="Digite seu nome para começar!"
                 required
               />
-              <button type="submit" disabled={nome.length === 0}>
+              <BtJogar
+                type="submit"
+                disabled={nome.length === 0}
+              >
                 Jogar
-              </button>
+              </BtJogar>
             </form>
           </Widget.Content>
         </Widget>
@@ -56,8 +61,39 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h1>Quizes da Galera</h1>
+            {/* eslint-disable-next-line max-len */}
+            <p>Dá uma olhada nos Quizes que a comunidade fez durante a Imersão React Next.js da Alura:</p>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            <LinkQuiz
+              href="https://quiz-pokemon.vercel.app/"
+              target="_blank"
+            >
+              Quiz Pokemon
+            </LinkQuiz>
+            <LinkQuiz
+              href="https://rpdr-quiz.vercel.app/"
+              target="_blank"
+            >
+              Quiz Rupaulshttps://internet-quiz.johnmaroeli.vercel.app/
+            </LinkQuiz>
+            <LinkQuiz
+              href="https://internet-quiz.johnmaroeli.vercel.app/"
+              target="_blank"
+            >
+              Quiz Internet
+            </LinkQuiz>
+            <LinkQuiz
+              href="https://internet-quiz.johnmaroeli.vercel.app/"
+              target="_blank"
+            >
+              Quiz Internet
+            </LinkQuiz>
+            <LinkQuiz
+              href="https://hogwarts-quiz.juliocarvalhos.vercel.app/"
+              target="_blank"
+            >
+              Quiz Hodwarts
+            </LinkQuiz>
           </Widget.Content>
         </Widget>
         <Footer />
