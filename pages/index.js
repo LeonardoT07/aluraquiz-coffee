@@ -74,7 +74,7 @@ export default function Home() {
               href="https://rpdr-quiz.vercel.app/"
               target="_blank"
             >
-              Quiz Rupaulshttps://internet-quiz.johnmaroeli.vercel.app/
+              Quiz Rupauls
             </LinkQuiz>
             <LinkQuiz
               href="https://internet-quiz.johnmaroeli.vercel.app/"
