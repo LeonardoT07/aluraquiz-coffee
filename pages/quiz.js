@@ -128,6 +128,7 @@ export default function QuizPage() {
       )}
       {screenState === screenStates.LOADING && (
         <QuizContainer>
+          <QuizLogo />
           <LoadingWidget />
         </QuizContainer>
       )}
