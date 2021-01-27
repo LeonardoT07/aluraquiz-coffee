@@ -9,6 +9,7 @@ const InputNome = styled.input.attrs('onChange', 'placeholder')`
     border: 1px solid ${({ theme }) => theme.colors.darkYellow} !important;
     border-radius: 4px;
     margin-bottom: 10px;
+    font-family: 'Maven Pro', sans-serif;
 
     &:focus {
         border: 0;

@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
     /* New styles */
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Courgette', cursive;
+
     // Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }
@@ -38,7 +39,8 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Maven+Pro:wght@400;500;600;700;800;900&family=Satisfy&display=swap" rel="stylesheet" />
 
         <title>Quiz Coffee</title>
         <meta name="title" content="Quiz Coffee" />
@@ -49,14 +51,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://metatags.io/" />
         <meta property="og:title" content="Quiz Coffee" />
         <meta property="og:description" content="Um quiz sobre café para você se divertir!" />
-        <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
+        <meta property="og:image" content="https://www.itl.cat/pngfile/big/36-365904_coffee-face-smile-wallpapers-hd-happy-cup-of.jpg" />
 
-        {/* Twitter */} 
+        {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://metatags.io/" />
         <meta property="twitter:title" content="Quiz Coffee" />
         <meta property="twitter:description" content="Um quiz sobre café para você se divertir!" />
-        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
+        <meta property="twitter:image" content="https://www.itl.cat/pngfile/big/36-365904_coffee-face-smile-wallpapers-hd-happy-cup-of.jpg" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

@@ -11,6 +11,7 @@ const QuizesGalera = styled.a.attrs('href', 'target')`
     margin-bottom: 10px;
     border-radius: 4px;
     text-decoration: none;
+    font-family: 'Maven Pro', sans-serif;
 
     &:hover {
         background-color: ${({ theme }) => theme.colors.darkYellowHover};

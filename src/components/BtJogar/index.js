@@ -10,6 +10,7 @@ const BtJogar = styled.button.attrs('type')`
     padding: 7px 10px;
     border: 0;
     border-radius: 3.5px;
+    font-family: 'Maven Pro', sans-serif;
 
     &:hover {
         cursor: pointer;
