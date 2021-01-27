@@ -126,18 +126,6 @@ export default function QuizPage() {
           />
         </QuizContainer>
       )}
-
-      {screenState === screenStates.QUIZ && (
-        <QuizContainer>
-          <QuizLogo />
-          <QuestionWidget
-            question={question}
-            questionIndex={questionIndex}
-            totalQuestions={totalQuestions}
-            onSubmit={handleSubmitQuiz}
-          />
-        </QuizContainer>
-      )}
       {screenState === screenStates.LOADING && (
         <QuizContainer>
           <LoadingWidget />
