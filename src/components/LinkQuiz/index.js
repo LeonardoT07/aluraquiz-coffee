@@ -7,13 +7,14 @@ const QuizesGalera = styled.a.attrs('href', 'target')`
 
     font-size: 15px;
     font-weight: 600;
-    padding: 7px 10px 7px 10px;
+    padding: 7px 10px;
     margin-bottom: 10px;
     border-radius: 4px;
     text-decoration: none;
-    font-family: 'Maven Pro', sans-serif;
+    transition: .25s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: ${({ theme }) => theme.colors.darkYellowHover};
     }
 `;

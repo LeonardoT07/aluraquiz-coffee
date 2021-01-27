@@ -4,9 +4,9 @@
   "description": "Antes de começar, já pegou um café para esse Quiz? Nada melhor que um quiz e um café quentinho para relaxar.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "image": "https://media.giphy.com/media/Q6joirtIBHUsw/giphy.gif",
       "title": "O café fica em qual posição entre as bebidas mais consumidas no mundo?",
-      "description": "Essa é pra aquecer",
+      "description": "Essa é fácil, dá para responder enquanto aquecer o café:",
       "answer": 1,
       "alternatives": [
         "Primeiro Lugar",
@@ -15,9 +15,9 @@
       ]
     },
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "image": "https://media.giphy.com/media/Z6vszQ8Mweukw/giphy.gif",
       "title": "De onde vem o grão do café?",
-      "description": "Essa é uma curiosidade bacana",
+      "description": "Uma curiosidade bacana, vamos ver se você acerta.",
       "answer": 0,
       "alternatives": [
         "São as sementes de uma fruta",
@@ -26,9 +26,9 @@
       ]
     },
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "image": "https://media.giphy.com/media/oXT9rjyu20bCSE2uzK/giphy.gif",
       "title": "Cada \"Cereja de Café\" tem quantas sementes?",
-      "description": "Se você usar a lógica, essa resposta está na pergunta!",
+      "description": "Se você usar a lógica, essa está fácil!",
       "answer": 0,
       "alternatives": [
         "2 Sementes",
@@ -37,9 +37,9 @@
       ]
     },
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "image": "https://media.giphy.com/media/SqP6xkizrTNO8/giphy.gif",
       "title": "O que acontece quando o café é moído na hora do preparo?",
-      "description": "Essa é pra aquecer",
+      "description": "Essa eu quiz moer um pouco seus neurônios ;P",
       "answer": 1,
       "alternatives": [
         "O nível de cafeína diminuí",
@@ -48,9 +48,9 @@
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+      "image": "https://media.giphy.com/media/zJ8ldRaGLnHTa/giphy.gif",
       "title": "Quanto tempo a substância da cafeína permanece no corpo?",
-      "description": "Faz tempo em haha",
+      "description": "Cuidado para não tomar muito café e ficar doidão hahaha",
       "answer": 1,
       "alternatives": [
          "1 a 3 horas",

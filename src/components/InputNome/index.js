@@ -1,6 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const InputNome = styled.input.attrs('onChange', 'placeholder')`
+const Input = styled.input.attrs('onChange', 'placeholder')`
     width: 100%;
     color: ${({ theme }) => theme.colors.torrao};
     
@@ -8,8 +10,8 @@ const InputNome = styled.input.attrs('onChange', 'placeholder')`
     padding: 7px 10px;
     border: 1px solid ${({ theme }) => theme.colors.darkYellow} !important;
     border-radius: 4px;
-    margin-bottom: 10px;
-    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 15px;
+    outline: 0;
 
     &:focus {
         border: 0;
@@ -17,4 +19,27 @@ const InputNome = styled.input.attrs('onChange', 'placeholder')`
     }
 `;
 
-export default InputNome;
+// eslint-disable-next-line react/prop-types
+export default function InputNome({ onChange, placeholder, ...props }) {
+  return (
+    <div>
+      <Input
+        onChange={onChange}
+        placeholder={placeholder}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      />
+    </div>
+  );
+}
+
+InputNome.defaultProps = {
+  value: '',
+};
+
+InputNome.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};

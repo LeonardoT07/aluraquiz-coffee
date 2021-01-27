@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: #00000070;
-  padding: 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
-  border-radius: 4px; 
+  border-radius: 4px;
+  font-size: 14px;
+
   img {
     width: 58px;
     margin-right: 23px;
