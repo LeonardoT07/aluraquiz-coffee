@@ -43,6 +43,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Maven+Pro:wght@400;500;600;700;800;900&family=Satisfy&display=swap" rel="stylesheet" />
 
         <title>Quiz Coffee</title>
+        <link rel="shortcut icon" href="/favcafe.png" />
         <meta name="title" content="Quiz Coffee" />
         <meta name="description" content="Um quiz sobre café para você se divertir!" />
 

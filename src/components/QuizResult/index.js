@@ -1,23 +1,35 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import Widget from '../Widget';
 
-function QuizResult() {
+function QuizResult({ results }) {
   return (
     <Widget>
       <Widget.Header>
         {/* <BackLinkArrow href="/" */}
         <h3>
-          Você acertou:
+          {'Você acertou: '}
+          {results.reduce((somatoriaAtual, resultAtual) => {
+            const isAcerto = resultAtual === true;
+            if (isAcerto) {
+              return somatoriaAtual + 1;
+            }
+            return somatoriaAtual;
+          }, 0)}
+          {' de 5'}
         </h3>
       </Widget.Header>
       <Widget.Content>
-        <h2>
-          0 de 5 (Resultado fake)
-        </h2>
-        <p>
-          Ainda melhorando os resultados
-        </p>
+        <ul>
+          {results.map((result, index) => (
+            <li key={`${result}_${index}`}>
+              {`Pergunta 0${index + 1}: `}
+              {result === true ? 'Acertou' : 'Errou'}
+            </li>
+          ))}
+        </ul>
       </Widget.Content>
     </Widget>
   );

@@ -17,7 +17,7 @@
     {
       "image": "https://media.giphy.com/media/Z6vszQ8Mweukw/giphy.gif",
       "title": "De onde vem o grão do café?",
-      "description": "Uma curiosidade bacana, vamos ver se você acerta.",
+      "description": "Uma curiosidade bacana, vamos ver se você acerta:",
       "answer": 0,
       "alternatives": [
         "São as sementes de uma fruta",
@@ -39,8 +39,8 @@
     {
       "image": "https://media.giphy.com/media/SqP6xkizrTNO8/giphy.gif",
       "title": "O que acontece quando o café é moído na hora do preparo?",
-      "description": "Essa eu quiz moer um pouco seus neurônios ;P",
-      "answer": 1,
+      "description": "Essa eu quiz moer um pouco seus neurônios!",
+      "answer": 2,
       "alternatives": [
         "O nível de cafeína diminuí",
         "O café fica com um leve toque doce",
@@ -50,7 +50,7 @@
     {
       "image": "https://media.giphy.com/media/zJ8ldRaGLnHTa/giphy.gif",
       "title": "Quanto tempo a substância da cafeína permanece no corpo?",
-      "description": "Cuidado para não tomar muito café e ficar doidão hahaha",
+      "description": "Cuidado na dose para não ficar muito acordado hahaha",
       "answer": 1,
       "alternatives": [
          "1 a 3 horas",
