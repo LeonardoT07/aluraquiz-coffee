@@ -60,7 +60,11 @@
     }
   ],
   "external": [
-    ""
+    "https://greys-anatomy-quiz.m1lenarodrigues.vercel.app/",
+    "https://alura-pokemonquiz.vercel.app/",
+    "https://pokemon-quiz.neorogerio.vercel.app/",
+    "https://quiz-web.hiaguedes.vercel.app/",
+    "https://tsquiz.vercel.app/"
   ],
   "theme": {
     "colors": {

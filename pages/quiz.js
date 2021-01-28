@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react';
@@ -11,8 +10,38 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
 import LoadingWidget from '../src/components/LoadingWidget';
-import QuizResult from '../src/components/QuizResult';
-import AlternativesForm from '../src/components/AlternativesForm';
+import QuizForm from '../src/components/QuizForm';
+
+function QuizResult({ results }) {
+  return (
+    <Widget>
+      <Widget.Header>
+        {/* <BackLinkArrow href="/" */}
+        <h3>
+          {'Você acertou: '}
+          {results.reduce((somatoriaAtual, resultAtual) => {
+            const isAcerto = resultAtual === true;
+            if (isAcerto) {
+              return somatoriaAtual + 1;
+            }
+            return somatoriaAtual;
+          }, 0)}
+          {' de 5'}
+        </h3>
+      </Widget.Header>
+      <Widget.Content>
+        <ul>
+          {results.map((result, index) => (
+            <li key={`result__${result}`}>
+              {`Pergunta 0${index + 1}: `}
+              {result === true ? 'Acertou' : 'Errou'}
+            </li>
+          ))}
+        </ul>
+      </Widget.Content>
+    </Widget>
+  );
+}
 
 function QuestionWidget({
   question, questionIndex, totalQuestions, onSubmit, addResult,
@@ -49,7 +78,7 @@ function QuestionWidget({
           {question.description}
         </p>
 
-        <AlternativesForm
+        <QuizForm
           onSubmit={(e) => {
             e.preventDefault();
             setIsQuestionSubmited(true);
@@ -57,7 +86,7 @@ function QuestionWidget({
             setTimeout(() => {
               addResult(isCorrect);
               onSubmit();
-              setHasAlternativeSelected(undefined);
+              setHasAlternativeSelected(false);
               setIsQuestionSubmited(false);
             }, 2 * 1000);
           }}
@@ -97,9 +126,9 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
-        </AlternativesForm>
+          {isQuestionSubmited && isCorrect && <p>Muito bem, está fazendo um ótimo café!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Humm... desse jeito vai queimar o café!</p>}
+        </QuizForm>
       </Widget.Content>
     </Widget>
   );

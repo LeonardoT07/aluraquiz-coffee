@@ -24,9 +24,14 @@ function QuizResult({ results }) {
       <Widget.Content>
         <ul>
           {results.map((result, index) => (
-            <li key={`${result}_${index}`}>
-              {`Pergunta 0${index + 1}: `}
-              {result === true ? 'Acertou' : 'Errou'}
+            <li key={`result__${result}`}>
+              #
+              {index + 1}
+              {' '}
+              Resultado:
+              {result === true
+                ? 'Acertou'
+                : 'Errou'}
             </li>
           ))}
         </ul>
