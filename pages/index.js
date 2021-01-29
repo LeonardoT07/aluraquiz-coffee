@@ -54,36 +54,23 @@ export default function Home() {
             {/* eslint-disable-next-line max-len */}
             <p>Dá uma olhada nos Quizes que a comunidade fez durante a Imersão React Next.js da Alura:</p>
 
-            <LinkQuiz
-              href="https://quiz-pokemon.vercel.app/"
-              target="_blank"
-            >
-              Quiz Pokemon
-            </LinkQuiz>
-            <LinkQuiz
-              href="https://rpdr-quiz.vercel.app/"
-              target="_blank"
-            >
-              Quiz Rupauls
-            </LinkQuiz>
-            <LinkQuiz
-              href="https://internet-quiz.johnmaroeli.vercel.app/"
-              target="_blank"
-            >
-              Quiz Internet
-            </LinkQuiz>
-            <LinkQuiz
-              href="https://internet-quiz.johnmaroeli.vercel.app/"
-              target="_blank"
-            >
-              Quiz Internet
-            </LinkQuiz>
-            <LinkQuiz
-              href="https://hogwarts-quiz.juliocarvalhos.vercel.app/"
-              target="_blank"
-            >
-              Quiz Hodwarts
-            </LinkQuiz>
+            {db.external.map((urlQuiz) => {
+              const [projectName, gitHubUser] = urlQuiz
+                .replace(/\//g, '')
+                .replace('https:', '')
+                .replace('.vercel.app', '')
+                .split('.');
+
+              return (
+                <LinkQuiz
+                  key={urlQuiz}
+                  href={`${urlQuiz}`}
+                  target="_blank"
+                >
+                  {`${gitHubUser}/${projectName}`}
+                </LinkQuiz>
+              );
+            })}
           </Widget.Content>
         </Widget>
         <Footer />

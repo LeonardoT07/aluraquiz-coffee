@@ -1,7 +1,18 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-import React from 'react';
 
+/*
+    Arquivo sem USO!!!!!
+*/
+
+/*
+    Arquivo sem USO!!!!!
+*/
+
+/*
+    Arquivo sem USO!!!!!
+*/
+import React from 'react';
 import Widget from '../Widget';
 
 function QuizResult({ results }) {

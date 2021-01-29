@@ -1,16 +1,17 @@
-/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
+/* eslint-disable max-len */
 import React from 'react';
+// import PropTypes from 'prop-types';
 
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import GitHubCorner from '../src/components/GitHubCorner';
-import Button from '../src/components/Button';
-import QuizContainer from '../src/components/QuizContainer';
-import LoadingWidget from '../src/components/LoadingWidget';
-import QuizForm from '../src/components/QuizForm';
+import db from '../../db.json';
+import Widget from '../../src/components/Widget';
+import QuizLogo from '../../src/components/QuizLogo';
+import QuizBackground from '../../src/components/QuizBackground';
+import GitHubCorner from '../../src/components/GitHubCorner';
+import Button from '../../src/components/Button';
+import QuizContainer from '../../src/components/QuizContainer';
+import LoadingWidget from '../../src/components/LoadingWidget';
+import QuizForm from '../../src/components/QuizForm';
 
 function QuizResult({ results }) {
   return (
@@ -79,22 +80,24 @@ function QuestionWidget({
         </p>
 
         <QuizForm
-          onSubmit={(e) => {
-            e.preventDefault();
+          id="form-quiz"
+          onSubmit={(event) => {
+            event.preventDefault();
             setIsQuestionSubmited(true);
 
             setTimeout(() => {
               addResult(isCorrect);
               onSubmit();
-              setHasAlternativeSelected(false);
               setIsQuestionSubmited(false);
+              setSelectedAlternative(undefined);
+              setHasAlternativeSelected(false);
             }, 2 * 1000);
           }}
         >
-          {question.alternatives.map((alternative, alternativeindex) => {
-            const alternativeID = `alternative__${alternativeindex}`;
+          {question.alternatives.map((alternative, alternativeIndex) => {
+            const alternativeID = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
-            const isSelected = selectedAlternativa === alternativeindex;
+            const isSelected = selectedAlternativa === alternativeIndex;
 
             return (
               <Widget.Alternativa
@@ -112,9 +115,10 @@ function QuestionWidget({
                   name={questionId}
                   onChange={() => {
                     setHasAlternativeSelected(true);
-                    setSelectedAlternative(alternativeindex);
+                    setSelectedAlternative(alternativeIndex);
                   }}
                   type="radio"
+                  checked={selectedAlternativa === alternativeIndex}
                 />
 
                 {alternative}
