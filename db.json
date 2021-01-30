@@ -60,8 +60,7 @@
     }
   ],
   "external": [
-    "",
-    ""
+    "https://quiz-justiceleague.levi-magny.vercel.app/"
   ],
   "theme": {
     "colors": {

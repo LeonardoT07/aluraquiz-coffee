@@ -4,12 +4,17 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 
-export default function QuizDaGaleraPage({ dbExterno }) {
+export default function QuizDaGaleraPage({
+  dbExterno, urlUserGit, projectName, gitHubUser,
+}) {
   return (
     <ThemeProvider theme={dbExterno.theme}>
       <QuizScreen
         externalQuestions={dbExterno.questions}
         externalBg={dbExterno.bg}
+        urlUserGit={urlUserGit}
+        projectName={projectName}
+        gitHubUser={gitHubUser}
       />
     </ThemeProvider>
   );
@@ -17,6 +22,7 @@ export default function QuizDaGaleraPage({ dbExterno }) {
 
 export async function getServerSideProps(context) {
   const [projectName, gitHubUser] = context.query.id.split('___');
+  const urlUserGit = `https://github.com/${gitHubUser}`;
 
   const dbExterno = await fetch(`https://${projectName}.${gitHubUser}.vercel.app/api/db`)
     .then((respostaDoServer) => {
@@ -27,15 +33,18 @@ export async function getServerSideProps(context) {
     })
     .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto)
     .catch((errServer) => {
-      console.log('Erro do servidor: ', errServer);
+      throw new Error(errServer);
     });
 
-  console.log('dbExterno: ', dbExterno);
-  console.log('Infos next: ', context.query.id);
+  // console.log('dbExterno: ', dbExterno);
+  // console.log('Infos next: ', context.query.id);
 
   return {
     props: {
       dbExterno,
+      projectName,
+      gitHubUser,
+      urlUserGit,
     },
   };
 }

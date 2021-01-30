@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const QuizesGalera = styled.a.attrs('href', 'target')`
+const QuizesGalera = styled.a`
     display: block;
     color: ${({ theme }) => theme.colors.torrao};
     background-color: ${({ theme }) => theme.colors.primary};

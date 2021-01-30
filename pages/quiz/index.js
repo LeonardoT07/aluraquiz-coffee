@@ -12,12 +12,13 @@ import Button from '../../src/components/Button';
 import QuizContainer from '../../src/components/QuizContainer';
 import LoadingWidget from '../../src/components/LoadingWidget';
 import QuizForm from '../../src/components/QuizForm';
+import BackLinkArrow from '../../src/components/BackLinkArrow';
+import Link from '../../src/components/Link';
 
 function QuizResult({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" */}
         <h3>
           {'Você acertou: '}
           {results.reduce((somatoriaAtual, resultAtual) => {
@@ -56,7 +57,10 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" */}
+        <BackLinkArrow
+          as={Link}
+          href="/"
+        />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>

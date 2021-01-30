@@ -11,6 +11,7 @@ import LinkQuiz from '../src/components/LinkQuiz';
 import Button from '../src/components/Button';
 import InputNome from '../src/components/InputNome';
 import QuizContainer from '../src/components/QuizContainer';
+import Link from '../src/components/Link';
 
 export default function Home() {
   const router = useRouter();
@@ -63,9 +64,9 @@ export default function Home() {
 
               return (
                 <LinkQuiz
+                  as={Link}
                   key={urlQuiz}
                   href={`/quiz/${projectName}___${gitHubUser}`}
-                  target="_blank"
                 >
                   {`${gitHubUser}/${projectName}`}
                 </LinkQuiz>

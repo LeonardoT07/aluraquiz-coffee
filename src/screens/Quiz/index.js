@@ -8,7 +8,7 @@ import QuizBackground from '../../components/QuizBackground';
 import GitHubCorner from '../../components/GitHubCorner';
 import Button from '../../components/Button';
 import QuizContainer from '../../components/QuizContainer';
-import LoadingWidget from '../../components/LoadingWidget';
+import TransitionsQuizes from '../../components/TransitionsQuizes';
 import QuizForm from '../../components/QuizForm';
 
 function QuizResult({ results }) {
@@ -128,8 +128,8 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmited && isCorrect && <p>Muito bem, está fazendo um ótimo café!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Humm... desse jeito vai queimar o café!</p>}
+          {isQuestionSubmited && isCorrect && <p>Você Acertou!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Você Errou!</p>}
         </QuizForm>
       </Widget.Content>
     </Widget>
@@ -142,7 +142,9 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg }) {
+export default function QuizPage({
+  externalQuestions, externalBg, urlUserGit, projectName, gitHubUser,
+}) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
@@ -159,12 +161,6 @@ export default function QuizPage({ externalQuestions, externalBg }) {
     ]);
   }
 
-  // [React chama de: Efeitos || Effects]
-  // React.useEffect
-  // atualiza = willUpdate
-  // morre = willUnmount
-
-  // nasce = didMount (só irá chamar uma vez, na hora que o componente acaba de montar)
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
@@ -197,12 +193,13 @@ export default function QuizPage({ externalQuestions, externalBg }) {
           />
           )}
 
-        {screenState === screenStates.LOADING && <LoadingWidget /> }
+        {screenState === screenStates.LOADING
+        && <TransitionsQuizes projectName={projectName} gitHubUser={gitHubUser} /> }
 
         {screenState === screenStates.RESULT && <QuizResult results={results} /> }
 
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/LeonardoT07" />
+      <GitHubCorner projectUrl={urlUserGit} />
     </QuizBackground>
   );
 }
