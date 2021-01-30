@@ -122,7 +122,7 @@ function QuestionWidget({
                     setSelectedAlternative(alternativeIndex);
                   }}
                   type="radio"
-                  checked={selectedAlternativa === alternativeIndex}
+                  checked={isSelected}
                 />
 
                 {alternative}

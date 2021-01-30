@@ -8,7 +8,7 @@ const Input = styled.input.attrs('onChange', 'placeholder')`
     
     font-size: 15px;
     padding: 7px 10px;
-    border: 1px solid ${({ theme }) => theme.colors.darkYellow} !important;
+    border: 1px solid ${({ theme }) => theme.colors.primary} !important;
     border-radius: 4px;
     margin-bottom: 15px;
     outline: 0;

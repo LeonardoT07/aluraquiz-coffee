@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.torrao};
+    color: ${({ theme }) => theme.colors.mainBg};
     border-radius: ${({ theme }) => theme.borderRadius};
     border: 0;
     
@@ -19,12 +19,12 @@ const Button = styled.button`
 
     &:hover,
     &:focus {
-        background-color: ${({ theme }) => theme.colors.darkYellowHover};
+        background-color: ${({ theme }) => `${theme.colors.primary}90`};
     }
 
     &:disabled{
         cursor: not-allowed;
-        background-color: ${({ theme }) => theme.colors.darkYellowDisabled};
+        background-color: ${({ theme }) => `${theme.colors.primary}60`};
     }
 `;
 

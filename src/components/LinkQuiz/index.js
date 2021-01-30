@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const QuizesGalera = styled.a`
     display: block;
-    color: ${({ theme }) => theme.colors.torrao};
+    color: ${({ theme }) => theme.colors.mainBg};
     background-color: ${({ theme }) => theme.colors.primary};
 
     font-size: 15px;
@@ -15,7 +15,7 @@ const QuizesGalera = styled.a`
 
     &:hover,
     &:focus {
-        background-color: ${({ theme }) => theme.colors.darkYellowHover};
+        background-color: ${({ theme }) => `${theme.colors.primary}90`};
     }
 `;
 

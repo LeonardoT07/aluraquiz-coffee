@@ -68,7 +68,7 @@ Widget.Alternativa = styled.a`
 
   &:hover,
     &:focus {
-        background-color: ${({ theme }) => theme.colors.darkYellowHover};
+      background-color: ${({ theme }) => `${theme.colors.primary}90`};
     }
 `;
 

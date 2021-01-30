@@ -65,10 +65,8 @@
   "theme": {
     "colors": {
       "primary": "#e0b06e",
-      "darkYellowHover": "#d49237",
-      "darkYellowDisabled": "#d4923770",
       "secondary": "#4e2c23",
-      "torrao":"#2b1812",
+      "mainBg": "#2b1812",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
       "success": "#4CAF50"
