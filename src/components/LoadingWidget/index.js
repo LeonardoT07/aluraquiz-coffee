@@ -6,7 +6,6 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" */}
         <h3>
           Preparando o café ...
         </h3>

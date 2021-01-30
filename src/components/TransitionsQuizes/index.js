@@ -6,10 +6,9 @@ function TransitionsQuizes({ projectName, gitHubUser }) {
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" */}
-        <h3>
-          {`Carregando ${projectName} de  ${gitHubUser}...`}
-        </h3>
+        <h2>
+          {`Hackeando ${projectName} de ${gitHubUser}...`}
+        </h2>
       </Widget.Header>
 
       <img
@@ -19,7 +18,7 @@ function TransitionsQuizes({ projectName, gitHubUser }) {
           height: 'auto',
           objectFit: 'cover',
         }}
-        src="https://media.giphy.com/media/5Ztn33chuvutW/giphy.gif"
+        src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"
       />
     </Widget>
   );

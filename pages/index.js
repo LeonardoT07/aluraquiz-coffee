@@ -40,7 +40,7 @@ export default function Home() {
 
             <form onSubmit={(e) => {
               e.preventDefault();
-              router.push(`/quiz?name=${nome}`);
+              router.push(`/quiz?player=${nome}`);
             }}
             >
               <InputNome

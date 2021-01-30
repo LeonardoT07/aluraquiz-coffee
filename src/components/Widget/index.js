@@ -66,6 +66,10 @@ Widget.Alternativa = styled.a`
   transition: .25s;
   display: block;
 
+  &:hover {
+    transform: translateX(10px);
+  }
+
   &:hover,
     &:focus {
       background-color: ${({ theme }) => `${theme.colors.primary}90`};

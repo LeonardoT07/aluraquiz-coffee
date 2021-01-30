@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React from 'react';
+import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 // import PropTypes from 'prop-types';
 
 import db from '../../db.json';
@@ -14,13 +16,25 @@ import LoadingWidget from '../../src/components/LoadingWidget';
 import QuizForm from '../../src/components/QuizForm';
 import BackLinkArrow from '../../src/components/BackLinkArrow';
 import Link from '../../src/components/Link';
+import AlternativeMessage from '../../src/components/AlternativeMessage';
 
-function QuizResult({ results }) {
+function QuizResult({ results, totalQuestions }) {
+  const router = useRouter();
+
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow
+          as={Link}
+          href="/"
+        />
         <h3>
-          {'Você acertou: '}
+          {`${router.query.player}, seu resultado: `}
+        </h3>
+      </Widget.Header>
+      <Widget.Content>
+        <h2>
+          {'Você acertou '}
           {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
@@ -28,10 +42,8 @@ function QuizResult({ results }) {
             }
             return somatoriaAtual;
           }, 0)}
-          {' de 5'}
-        </h3>
-      </Widget.Header>
-      <Widget.Content>
+          {` de ${totalQuestions} Perguntas!`}
+        </h2>
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}`}>
@@ -55,7 +67,16 @@ function QuestionWidget({
   const isCorrect = selectedAlternativa === question.answer;
 
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      transition={{ delay: 0, duration: 1 }}
+      variants={{
+        show: { opacity: 1, x: '0' },
+        hidden: { opacity: 0, x: '-100%' },
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <Widget.Header>
         <BackLinkArrow
           as={Link}
@@ -93,9 +114,9 @@ function QuestionWidget({
               addResult(isCorrect);
               onSubmit();
               setIsQuestionSubmited(false);
-              setSelectedAlternative(undefined);
               setHasAlternativeSelected(false);
-            }, 2 * 1000);
+              setSelectedAlternative(undefined);
+            }, 3 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -112,9 +133,7 @@ function QuestionWidget({
                 data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
-                  style={{
-                    marginRight: '12px',
-                  }}
+                  style={{ marginRight: '12px' }}
                   id={alternativeID}
                   name={questionId}
                   onChange={() => {
@@ -134,8 +153,22 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmited && isCorrect && <p>Muito bem, está fazendo um ótimo café!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Humm... desse jeito vai queimar o café!</p>}
+          {isQuestionSubmited
+            && isCorrect
+            && (
+            <AlternativeMessage>
+              Muito bem, você sabe sobre café!
+            </AlternativeMessage>
+            )}
+
+          {isQuestionSubmited
+          && !isCorrect
+          && (
+          <AlternativeMessage>
+            Que pena, você errou!
+          </AlternativeMessage>
+          )}
+
         </QuizForm>
       </Widget.Content>
     </Widget>
@@ -205,7 +238,7 @@ export default function QuizPage() {
 
         {screenState === screenStates.LOADING && <LoadingWidget /> }
 
-        {screenState === screenStates.RESULT && <QuizResult results={results} /> }
+        {screenState === screenStates.RESULT && <QuizResult results={results} totalQuestions={totalQuestions} /> }
 
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/LeonardoT07" />
