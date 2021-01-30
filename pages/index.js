@@ -64,7 +64,7 @@ export default function Home() {
               return (
                 <LinkQuiz
                   key={urlQuiz}
-                  href={`${urlQuiz}`}
+                  href={`/quiz/${projectName}___${gitHubUser}`}
                   target="_blank"
                 >
                   {`${gitHubUser}/${projectName}`}

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-    background-color: ${({ theme }) => theme.colors.darkYellow};
+    background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.torrao};
     border-radius: ${({ theme }) => theme.borderRadius};
     border: 0;

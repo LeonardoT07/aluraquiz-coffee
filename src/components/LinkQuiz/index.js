@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const QuizesGalera = styled.a.attrs('href', 'target')`
     display: block;
     color: ${({ theme }) => theme.colors.torrao};
-    background-color: ${({ theme }) => theme.colors.darkYellow};
+    background-color: ${({ theme }) => theme.colors.primary};
 
     font-size: 15px;
     font-weight: 600;

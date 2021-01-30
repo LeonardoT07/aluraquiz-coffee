@@ -60,15 +60,15 @@
     }
   ],
   "external": [
-    "https://pokemon-quiz.neorogerio.vercel.app/",
-    "https://quiz-web.hiaguedes.vercel.app/"
+    "",
+    ""
   ],
   "theme": {
     "colors": {
-      "darkYellow": "#e0b06e",
+      "primary": "#e0b06e",
       "darkYellowHover": "#d49237",
       "darkYellowDisabled": "#d4923770",
-      "brown": "#4e2c23",
+      "secondary": "#4e2c23",
       "torrao":"#2b1812",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
