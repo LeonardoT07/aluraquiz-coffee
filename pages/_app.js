@@ -52,14 +52,14 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://metatags.io/" />
         <meta property="og:title" content="Quiz Coffee" />
         <meta property="og:description" content="Um quiz sobre café para você se divertir!" />
-        <meta property="og:image" content="https://www.itl.cat/pngfile/big/36-365904_coffee-face-smile-wallpapers-hd-happy-cup-of.jpg" />
+        <meta property="og:image" content="/quizcoffee.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://metatags.io/" />
         <meta property="twitter:title" content="Quiz Coffee" />
         <meta property="twitter:description" content="Um quiz sobre café para você se divertir!" />
-        <meta property="twitter:image" content="https://www.itl.cat/pngfile/big/36-365904_coffee-face-smile-wallpapers-hd-happy-cup-of.jpg" />
+        <meta property="twitter:image" content="/quizcoffee.jpg" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
