@@ -157,7 +157,7 @@ function QuestionWidget({
             && isCorrect
             && (
             <AlternativeMessage>
-              Muito bem, você sabe sobre café!
+              Você acertou!
             </AlternativeMessage>
             )}
 
@@ -165,7 +165,7 @@ function QuestionWidget({
           && !isCorrect
           && (
           <AlternativeMessage>
-            Que pena, você errou!
+            Você errou!
           </AlternativeMessage>
           )}
 
